@@ -1,5 +1,5 @@
 # Automove
-A Garry's Mod addon to let players toggle automatic forward movement.
+A lightweight Garry's Mod addon to let players toggle automatic forward movement.
 
 # Console Commands
 automove: Activates automove.
