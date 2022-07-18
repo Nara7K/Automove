@@ -25,11 +25,26 @@ if CLIENT then
 			
 			if AutomoveMode == 0 then
 				cmd:SetForwardMove( ply:GetWalkSpeed() )
+				if ply:KeyDown( 512 ) then
+					cmd:SetSideMove( -ply:GetWalkSpeed() )
+				elseif ply:KeyDown ( 1024 ) then
+					cmd:SetSideMove( ply:GetWalkSpeed() )
+				end
 			elseif AutomoveMode == 1 then
 				cmd:SetForwardMove( ply:GetRunSpeed() )
 				cmd:AddKey(IN_SPEED)
+				if ply:KeyDown( 512 ) then
+					cmd:SetSideMove( -ply:GetRunSpeed() )
+				elseif ply:KeyDown ( 1024 ) then
+					cmd:SetSideMove( ply:GetRunSpeed() )
+				end
 			elseif AutomoveMode == 2 then
 				cmd:SetForwardMove( ply:GetSlowWalkSpeed() )
+				if ply:KeyDown( 512 ) then
+					cmd:SetSideMove( -ply:GetSlowWalkSpeed() )
+				elseif ply:KeyDown ( 1024 ) then
+					cmd:SetSideMove( ply:GetSlowWalkSpeed() )
+				end
 			end
 		else
 			return
